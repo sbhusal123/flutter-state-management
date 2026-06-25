@@ -5,3 +5,9 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 - BLoC
 - Cubit
 
+## Docs:
+
+- [Intro To Bloc](./Docs/1.%20Intro.md)
+
+- [State, Event, BLoC and Usage With Flutter UIs](./Docs/2.%20State%20Event%20And%20Block.md)
+
