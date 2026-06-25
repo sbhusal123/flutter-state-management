@@ -49,7 +49,16 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: .center,
           children: [
             const Text('You have pushed the button this many times:'),
-            BlocBuilder<CounterBloc,CounterState>(
+            BlocBuilder<CounterBloc, CounterState>(
+              // buildWhen: (previousState, currentState){
+              //   print("Previous Value: ${previousState.count}");
+              //   print("Current State: ${currentState.count}");
+              //  if (currentState.count % 2 == 0) {
+              //   return true;
+              //  }
+              //  return false;
+              // // return true;
+              // },
               bloc: counterBloc,
               builder: (context, state) {
                 return Text(
@@ -62,13 +71,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          counterBloc.add(CounterIncreamentEvent());
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: Row(
+        mainAxisAlignment: .center,
+        children: [
+          FloatingActionButton(
+            onPressed: (){
+              counterBloc.add(CounterIncreamentEvent());
+            },
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+          SizedBox(width: 20,),
+          FloatingActionButton(
+            onPressed: (){
+              counterBloc.add(CounterDecreamentEvent());
+            },
+            tooltip: 'Decreament',
+            child: const Icon(Icons.remove),
+          ),          
+        ],
+      )
+
     );
   }
 }
