@@ -19,3 +19,4 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 - [Using BlocListner in response to state change](./Docs/6.%20BlocListner.md)
 
+- [Using functionality of listner and builder with BlocConsumer](./Docs/7.%20BlocConsumer.md)
