@@ -39,7 +39,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  final counterBloc = CounterBloc();
+  final counterBloc = CounterBloc(); // creates instance of the bloc
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           FloatingActionButton(
             onPressed: (){
-              counterBloc.add(CounterIncreamentEvent());
+              counterBloc.add(CounterIncreamentEvent()); // use instance of bloc to dispatch event
             },
             tooltip: 'Increment',
             child: const Icon(Icons.add),
