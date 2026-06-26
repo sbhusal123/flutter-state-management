@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BlocProvider(
+        create: (context)=> CounterBloc(),
+        child: const MyHomePage(title: 'Flutter Demo Home Page')
+      )
     );
   }
 }
@@ -50,16 +54,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             const Text('You have pushed the button this many times:'),
             BlocBuilder<CounterBloc, CounterState>(
-              // buildWhen: (previousState, currentState){
-              //   print("Previous Value: ${previousState.count}");
-              //   print("Current State: ${currentState.count}");
-              //  if (currentState.count % 2 == 0) {
-              //   return true;
-              //  }
-              //  return false;
-              // // return true;
-              // },
-              bloc: counterBloc,
+              buildWhen: (previousState, currentState){
+                  print("Previous Value: ${previousState.count}");
+                  print("Current State: ${currentState.count}");
+                  if (currentState.count % 2 == 0) {
+                    return true;
+                  }
+                  return false;
+                // return true;
+              },
+              // bloc: counterBloc,
               builder: (context, state) {
                 return Text(
                   '${state.count}',
