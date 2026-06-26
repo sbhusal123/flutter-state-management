@@ -15,4 +15,7 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 - [Passing State to Widget Tree with BlocProvider](./Docs/4.%20%20BlocProvider.md)
 
-- [Using MultiBloc Provider](./Docs/5.%20MultiBlocProvider.md)
+- [Using MultiBlocProvider to pass multiple Blocs down the widget tree.](./Docs/5.%20MultiBlocProvider.md)
+
+- [Using BlocListner in response to state change](./Docs/6.%20BlocListner.md)
+

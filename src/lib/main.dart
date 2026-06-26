@@ -67,7 +67,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
-
             BlocBuilder<VisibilityBloc, VisibilityState>(
               builder: (context, state) {
                 return Visibility(
@@ -84,11 +83,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
+            BlocListener<CounterBloc, CounterState>(
+              listenWhen: (previous, current) {
+                return true;
+              },
+              listener: (context, state) {
+                if(state.count == 3){
+                  final snackbar = SnackBar(
+                    content: Text('Counter value is ${state.count}')
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                }
+              },
+              child: SizedBox(
+                width: 0,
+                height: 0,
+              ),
+            )
           ],
         ),
       ),
       floatingActionButton: Row(
-        mainAxisAlignment: .center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
             onPressed: (){
