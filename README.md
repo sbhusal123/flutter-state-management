@@ -15,3 +15,4 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 - [Passing State to Widget Tree with BlocProvider](./Docs/4.%20%20BlocProvider.md)
 
+- [Using MultiBloc Provider](./Docs/5.%20MultiBlocProvider.md)
