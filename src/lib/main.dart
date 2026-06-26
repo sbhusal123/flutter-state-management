@@ -59,7 +59,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            BlocBuilder<CounterBloc, CounterState>(
+            BlocConsumer<CounterBloc, CounterState>(
+              listenWhen: (previous, current) => true,
+              buildWhen: (previous, current) => true,
+              listener: (context, state) {
+                if(state.count == 3){
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: const Text("Value is 3"))
+                  );
+                }
+              },
               builder: (context, state) {
                 return Text(
                   '${state.count}',
@@ -83,23 +92,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
             ),
-            BlocListener<CounterBloc, CounterState>(
-              listenWhen: (previous, current) {
-                return true;
-              },
-              listener: (context, state) {
-                if(state.count == 3){
-                  final snackbar = SnackBar(
-                    content: Text('Counter value is ${state.count}')
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(snackbar);
-                }
-              },
-              child: SizedBox(
-                width: 0,
-                height: 0,
-              ),
-            )
+            // BlocListener<CounterBloc, CounterState>(
+            //   listenWhen: (previous, current) {
+            //     return true;
+            //   },
+            //   listener: (context, state) {
+            //     if(state.count == 3){
+            //       final snackbar = SnackBar(
+            //         content: Text('Counter value is ${state.count}')
+            //       );
+            //       ScaffoldMessenger.of(context).showSnackBar(snackbar);
+            //     }
+            //   },
+            //   child: SizedBox(
+            //     width: 0,
+            //     height: 0,
+            //   ),
+            // )
           ],
         ),
       ),
