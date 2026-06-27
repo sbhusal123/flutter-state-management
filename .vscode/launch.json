@@ -7,5 +7,11 @@
             "type": "dart",
             "program": "src/lib/main.dart"
         },
+        {
+            "name": "app (Debug)",
+            "request": "launch",
+            "type": "dart",
+            "program": "app/lib/main.dart"
+        },
     ]
 }
