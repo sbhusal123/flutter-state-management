@@ -26,7 +26,9 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 ## Repository Pattern: Reference
 
-- [Setup and Code Structure](./Docs/Repository%20Pattern/1.%20Setup%20and%20Code%20Structure.md)
+- [Setup and Code Structure: Model, Provider and Repository](./Docs/Repository%20Pattern/1.%20Setup%20and%20Code%20Structure.md)
+
+- [Creating State, Event And Bloc](./Docs/Repository%20Pattern/2.%20State%20Event%20and%20Bloc.md)
 
 
 > [Source Code: app](./app/)
