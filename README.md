@@ -30,5 +30,7 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 - [Creating State, Event And Bloc](./Docs/Repository%20Pattern/2.%20State%20Event%20and%20Bloc.md)
 
+- [Using RepositoryBloc + UI Integration](./Docs/Repository%20Pattern/3.%20Integrating%20RepositoryBloc%20on%20UI.md)
+
 
 > [Source Code: app](./app/)
