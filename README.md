@@ -34,3 +34,7 @@ Notes Curated From [Ripples Code](https://www.youtube.com/playlist?list=PLCaS22S
 
 
 > [Source Code: app](./app/)
+
+
+## References:
+- [Bloc Library: Docs](https://bloclibrary.dev/)
